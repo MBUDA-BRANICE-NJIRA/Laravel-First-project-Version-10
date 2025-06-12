@@ -42,7 +42,7 @@ Route::get('/Services', function () {
 Route::get('/Portfolio', function () {
     return view('Portfolio');
 });
-//Testim0nial
+//Testimonial
 Route::get('/Testimonial', function () {
     return view('Testimonilal');
 });

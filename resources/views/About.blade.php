@@ -7,6 +7,6 @@
 </head>
 <body>
     @include('Navbar')
-    <h1>Home Page</h1>
+    <h1>About Page</h1>
 </body>
 </html>
