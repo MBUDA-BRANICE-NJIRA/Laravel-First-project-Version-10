@@ -20,7 +20,7 @@
 
 //Home Page Routes
 Route::get('Home', function () {
-    return view('Home');
+    return view('/');
 });
 
 //About
@@ -49,5 +49,5 @@ Route::get('Testimonial', function () {
 
 //Login
 Route::get('LogIn', function () {
-    return view('BlogSingle');
+    return view('LogIn');
 });
