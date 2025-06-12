@@ -1,6 +1,6 @@
 <?php
 
-//use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,35 +19,35 @@
 
 
 //Home Page Routes
-Route::get('Home', function () {
-    return view('/');
+Route::get('/', function () {
+    return view('/Home');
 });
 
 //About
-Route::get('About', function () {
+Route::get('/About', function () {
     return view('About');
 });
 
 //Contact
-Route::get('Contact', function () {
+Route::get('/Contact', function () {
     return view('Contact');
 });
 
 //Services
-Route::get('Services', function () {
+Route::get('/Services', function () {
     return view('Services');
 });
 
 //Portfolio and Blog
-Route::get('Portfolio', function () {
+Route::get('/Portfolio', function () {
     return view('Portfolio');
 });
-//Testiminial
-Route::get('Testimonial', function () {
+//Testim0nial
+Route::get('/Testimonial', function () {
     return view('Testimonilal');
 });
 
 //Login
-Route::get('LogIn', function () {
+Route::get('/LogIn', function () {
     return view('LogIn');
 });
