@@ -44,7 +44,7 @@ Route::get('/Portfolio', function () {
 });
 //Testimonial
 Route::get('/Testimonial', function () {
-    return view('Testimonilal');
+    return view('Testimonial');
 });
 
 //Login
