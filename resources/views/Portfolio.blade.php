@@ -295,9 +295,7 @@
         </section>
     </main>
 
-    <footer style="background: var(--text); color: white; text-align: center; padding: 2rem; margin-top: 3rem;">
-        <p>&copy; 2023 Your Company. All rights reserved.</p>
-    </footer>
+    
 
     <script>
         // Simple filter functionality

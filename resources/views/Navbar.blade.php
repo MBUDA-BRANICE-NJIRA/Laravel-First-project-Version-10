@@ -11,10 +11,10 @@
         <ul class="nav-links">
             <li><a href="/" class="nav-item">Home</a></li>
             <li><a href="/About" class="nav-item">About</a></li>
-            <li><a href="/Contact" class="nav-item">Contact</a></li>
             <li><a href="/Services" class="nav-item">Services</a></li>
             <li><a href="/Portfolio" class="nav-item">Portfolio</a></li>
             <li><a href="/Testimonial" class="nav-item">Testimonial</a></li>
+            <li><a href="/Contact" class="nav-item">Contact</a></li>
             <li><a href="/LogIn" class="nav-cta">Log In</a></li>
         </ul>
     </nav>

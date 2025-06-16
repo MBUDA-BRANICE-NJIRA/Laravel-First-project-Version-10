@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController; // Import the HomeController
+use App\Http\Controllers\ContactController; // Import the ContactController
+use App\Http\Controllers\AboutController;// Import the AboutController
 
 /*
 |--------------------------------------------------------------------------
@@ -19,19 +22,25 @@ use Illuminate\Support\Facades\Route;
 
 
 //Home Page Routes
-Route::get('/', function () {
-    return view('/Home');
-});
 
-//About
-Route::get('/About', function () {
-    return view('About');
-});
+// Route::get('/', function () {
+//     return view('/Home');
+// });
+Route::get('/', [HomeController::class, 'index']);
+
+//ABOUT PAGE ROUTES
+// Route::get('/About', function () {
+//     return view('About');
+// });
+
+//Using a controller for the About page
+Route::get('/About', [AboutController::class, 'index']);
 
 //Contact
-Route::get('/Contact', function () {
-    return view('Contact');
-});
+// Route::get('/Contact', function () {
+//     return view('Contact');
+// });
+Route::get('/Contact', [ContactController::class, 'index']);
 
 //Services
 Route::get('/Services', function () {
