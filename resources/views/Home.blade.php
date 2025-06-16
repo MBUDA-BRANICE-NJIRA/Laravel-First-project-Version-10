@@ -99,14 +99,7 @@
             margin-bottom: 1rem;
         }
 
-        footer {
-            background: var(--text);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
+       
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.25rem;
@@ -147,8 +140,6 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Your Brand. All rights reserved.</p>
-    </footer>
+    
 </body>
 </html>
