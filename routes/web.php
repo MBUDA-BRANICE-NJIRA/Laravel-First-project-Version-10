@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; // Import the HomeController
 use App\Http\Controllers\ContactController; // Import the ContactController
+use App\Http\Controllers\ServicesController; // Import the ServicesController
 use App\Http\Controllers\AboutController;// Import the AboutController
+use App\Http\Controllers\PortfolioController; // Import the PortfolioController
+use App\Http\Controllers\TestimonialController; // Import the TestimonialController
 
 /*
 |--------------------------------------------------------------------------
@@ -43,18 +46,22 @@ Route::get('/About', [AboutController::class, 'index']);
 Route::get('/Contact', [ContactController::class, 'index']);
 
 //Services
-Route::get('/Services', function () {
-    return view('Services');
-});
+// Route::get('/Services', function () {
+//     return view('Services');
+// });
+Route::get('/Services', [ServicesController::class, 'index']);
 
-//Portfolio and Blog
-Route::get('/Portfolio', function () {
-    return view('Portfolio');
-});
+//PORTFOLIO
+// Route::get('/Portfolio', function () {
+//     return view('Portfolio');
+// });
+Route::get('/Portfolio', [PortfolioController::class, 'index']);
+
 //Testimonial
-Route::get('/Testimonial', function () {
-    return view('Testimonial');
-});
+// Route::get('/Testimonial', function () {
+//     return view('Testimonial');
+// });
+Route::get('/Testimonial', [TestimonialController::class, 'index']);
 
 //Login
 Route::get('/LogIn', function () {
