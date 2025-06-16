@@ -3,84 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Premium Navigation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 </head>
 <body>
-    <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/About">About</a></li>
-        <li><a href="/Contact">Contact</a></li>
-        <li><a href="/Services">Services</a></li>
-        <li><a href="/Portfolio">Portfolio</a></li>
-        <li><a href="/Testimonial">Testimonial</a></li>
-        <li><a href="/LogIn">Log In</a></li>
-    </ul>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="/" class="nav-item">Home</a></li>
+            <li><a href="/About" class="nav-item">About</a></li>
+            <li><a href="/Contact" class="nav-item">Contact</a></li>
+            <li><a href="/Services" class="nav-item">Services</a></li>
+            <li><a href="/Portfolio" class="nav-item">Portfolio</a></li>
+            <li><a href="/Testimonial" class="nav-item">Testimonial</a></li>
+            <li><a href="/LogIn" class="nav-cta">Log In</a></li>
+        </ul>
+    </nav>
+
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            background-color: #f9fafb;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .navbar {
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
         .nav-links {
             display: flex;
             justify-content: center;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            background-color: #2c3e50;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            align-items: center;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0 2rem;
+            max-width: 1280px;
+            height: 72px;
+            margin-right: 100px;
         }
-        
-        .nav-links li {
-            position: relative;
-        }
-        
-        .nav-links li a {
-            display: block;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 15px 20px;
+
+        .nav-item {
+            color: var(--text);
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s ease;
+            font-size: 0.9375rem;
+            padding: 0.75rem 1.25rem;
+            margin: 0 0.125rem;
+            border-radius: 0.375rem;
+            transition: var(--transition);
+            position: relative;
         }
-        
-        .nav-links li a:hover {
-            background-color: #34495e;
-            color: #fff;
+
+        .nav-item:hover {
+            color: var(--primary);
+            background: rgba(37, 99, 235, 0.05);
         }
-        
-        .nav-links li a::after {
+
+        .nav-item::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background: #3498db;
-            transition: all 0.3s ease;
+            bottom: -2px;
+            left: 1.25rem;
+            right: 1.25rem;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: var(--transition);
         }
-        
-        .nav-links li a:hover::after {
-            width: 100%;
-            left: 0;
+
+        .nav-item:hover::after {
+            transform: scaleX(1);
         }
-        
+
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-left: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-links {
+                padding: 0 1.5rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
-                flex-direction: column;
-                align-items: center;
+                height: 64px;
+                padding: 0 1rem;
+                justify-content: space-between;
             }
             
-            .nav-links li {
-                width: 100%;
+            .nav-item {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.875rem;
+                margin: 0;
             }
             
-            .nav-links li a {
-                padding: 12px;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
+            .nav-cta {
+                padding: 0.5rem 1rem;
+                margin-left: 0.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding: 0 0.5rem;
+                justify-content: flex-start;
+            }
+            
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .nav-item, .nav-cta {
+                white-space: nowrap;
             }
         }
     </style>
