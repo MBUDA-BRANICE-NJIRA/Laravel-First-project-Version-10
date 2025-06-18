@@ -438,6 +438,7 @@
     </style>
 </head>
 <body>
+    @include('Navbar')
     <section class="hero-section">
         <div class="floating-elements">
             <div class="floating-shape"></div>
