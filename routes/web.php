@@ -63,6 +63,13 @@ Route::get('/Portfolio', [PortfolioController::class, 'index']);
 // });
 Route::get('/Testimonial', [TestimonialController::class, 'index']);
 
+//Events
+
+Route::get('/Events', function () {
+    return view('Events');
+});
+
+
 //Login
 Route::get('/LogIn', function () {
     return view('LogIn');
