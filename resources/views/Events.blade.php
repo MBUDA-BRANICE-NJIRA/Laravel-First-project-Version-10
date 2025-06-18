@@ -295,6 +295,7 @@
     </style>
 </head>
 <body>
+    @include('Navbar')
     <div class="container">
         <div class="events-header">
             <h1>Events</h1>
