@@ -444,6 +444,7 @@
     </style>
 </head>
 <body>
+    @include('Navbar')
     <div class="background-shapes">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
