@@ -299,17 +299,7 @@
         <div class="events-header">
             <h1>Events</h1>
             <p>Discover upcoming events and activities. Stay connected with what's happening.</p>
-        </div>
-
-        <div id="events-container">
-            <div class="empty-state">
-                <h3>No events yet</h3>
-                <p>Get started by creating your first event</p>
-                <button class="empty-state-btn" onclick="openModal()">Create Event</button>
-            </div>
-        </div>
-
-        <div class="events-grid" id="events-grid" style="display: none;"></div>
+        </div> 
     </div>
 
     <button class="add-event-btn" onclick="openModal()">+</button>
